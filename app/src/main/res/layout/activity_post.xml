@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/word"
         android:layout_width="340dp"
         android:layout_height="165dp"
         android:layout_marginStart="30dp"
@@ -47,8 +47,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent" />
-
-
-
 
 </android.support.constraint.ConstraintLayout>
