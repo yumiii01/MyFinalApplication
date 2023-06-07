@@ -3,7 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
+    <TextView
+        android:id="@+id/_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="" />
     <TextView
         android:id="@+id/BoardTitle"
         android:layout_width="match_parent"
@@ -13,7 +18,13 @@
         android:text=""
         android:textAppearance="?android:attr/textAppearanceLarge" />
     <TextView
-        android:id="@+id/BoardCreateTime"
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="" />
+    <TextView
+        android:id="@+id/CreateTime"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"

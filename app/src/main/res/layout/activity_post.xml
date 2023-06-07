@@ -18,14 +18,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Title"
+        android:id="@+id/title"
         android:layout_width="418dp"
         android:layout_height="97dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="51dp"
         android:ems="10"
         android:hint="请在此输入标题"
-        app:layout_constraintBottom_toTopOf="@+id/Content"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +35,7 @@
     </EditText>
 
     <EditText
-        android:id="@+id/Content"
+        android:id="@+id/content"
         android:layout_width="411dp"
         android:layout_height="453dp"
         android:layout_marginTop="164dp"
@@ -42,11 +43,13 @@
         android:layout_weight="1"
         android:gravity="left"
         android:hint="请在此输入内容"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/PostButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></EditText>
+        app:layout_constraintTop_toTopOf="parent">
+    </EditText>
 
     <Button
         android:id="@+id/PostButton"

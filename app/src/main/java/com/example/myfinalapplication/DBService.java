@@ -17,7 +17,7 @@ public class DBService extends SQLiteOpenHelper {
 
 
     public DBService(Context context, String name, SQLiteDatabase.CursorFactory factory,
-                    int version) {
+                     int version) {
         super(context, name, factory, version);
     }
 
@@ -28,12 +28,13 @@ public class DBService extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("create table Board(_id integer primary key autoincrement, title varchar, content varchar)");
+        sqLiteDatabase.execSQL("create table Board(_id INTEGER PRIMARY KEY AUTOINCREMENT,title varchar,content varchar,CreateTime varchar)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
+
 }
 
