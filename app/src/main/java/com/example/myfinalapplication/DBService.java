@@ -1,37 +1,39 @@
 package com.example.myfinalapplication;
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.text.format.DateFormat;
+import android.util.Log;
+import android.widget.Toast;
 
-public class DBService {
+public class DBService extends SQLiteOpenHelper {
 
-    private static SQLiteDatabase db = null;
+    private static final int VERSION = 1;
+    private static final String DB_NAME = "Board.db";
+    public static final String TB_NAME = "Board";
 
-    static {
-        db = SQLiteDatabase.openOrCreateDatabase("data/data/cn.lger.board/Board.db", null);
-        String sql = "create table NoteBook(_id integer primary key autoincrement,title varchar(255),content TEXT, createTime varchar(25))";
-        try{
-            db.rawQuery("select count(1) from Board ",null);
-        }catch(Exception e){
-            db.execSQL(sql);
-        }
+
+    public DBService(Context context, String name, SQLiteDatabase.CursorFactory factory,
+                    int version) {
+        super(context, name, factory, version);
     }
 
-    public static SQLiteDatabase getSQLiteDatabase(){
-        return db;
+    DBService(Context context) {
+        super(context, "Board.db", null, 1);
+
     }
 
-    public static Cursor queryAll(){
-        return db.rawQuery("select * from Board ",null);
+    @Override
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        sqLiteDatabase.execSQL("create table Board(_id integer primary key autoincrement, title varchar, content varchar)");
     }
 
-    public static Cursor queryNoteById(Integer id){
-        return db.rawQuery("select * from Board where _id =?",new String[]{id.toString()});
-    }
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
-    public static void addBoard(ContentValues values){
-        values.put("createTime", DateFormat.format("yyyy-MM-dd kk:mm:ss", System.currentTimeMillis()).toString());
-        db.insert("Board", null, values);
     }
 }
+

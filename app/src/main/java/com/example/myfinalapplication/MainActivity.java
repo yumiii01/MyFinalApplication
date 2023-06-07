@@ -13,9 +13,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button post = (Button) findViewById(R.id.post);
-        Button view = (Button) findViewById(R.id.view);
-        post.setOnClickListener(new View.OnClickListener() {
+        Button Post = (Button) findViewById(R.id.Post);
+        Button View = (Button) findViewById(R.id.View);
+        Post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        view.setOnClickListener(new View.OnClickListener() {
+        View.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();

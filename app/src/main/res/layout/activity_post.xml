@@ -7,45 +7,59 @@
     tools:context=".PostActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/BoardId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:text="请在下方输入您想发布的内容："
-        android:textSize="20sp"
+        android:text=""
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/word"
-        android:layout_width="340dp"
-        android:layout_height="165dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="380dp"
+        android:id="@+id/Title"
+        android:layout_width="418dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="51dp"
         android:ems="10"
-        android:inputType="textLongMessage|textPassword"
-        android:textSize="20sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="请在此输入标题"
+        app:layout_constraintBottom_toTopOf="@+id/Content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toTopOf="parent">
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/Content"
+        android:layout_width="411dp"
+        android:layout_height="453dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginBottom="22dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:hint="请在此输入内容"
+        app:layout_constraintBottom_toTopOf="@+id/PostButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
 
     <Button
-        android:id="@+id/postbutton"
+        android:id="@+id/PostButton"
         android:layout_width="138dp"
         android:layout_height="60dp"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
-        android:layout_marginBottom="228dp"
+        android:layout_marginBottom="32dp"
         android:text="确认提交"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

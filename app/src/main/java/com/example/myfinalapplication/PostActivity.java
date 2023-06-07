@@ -21,8 +21,8 @@ public class PostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
 
-        Button postbutton = (Button) findViewById(R.id.postbutton);
-        postbutton.setOnClickListener(new View.OnClickListener() {
+        Button PostButton = (Button) findViewById(R.id.PostButton);
+        PostButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();

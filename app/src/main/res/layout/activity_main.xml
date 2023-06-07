@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/post"
+        android:id="@+id/Post"
         android:layout_width="136dp"
         android:layout_height="68dp"
         android:layout_marginStart="52dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/view"
+        android:id="@+id/View"
         android:layout_width="136dp"
         android:layout_height="68dp"
         android:layout_marginTop="508dp"
